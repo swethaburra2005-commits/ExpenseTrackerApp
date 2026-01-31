@@ -1,11 +1,11 @@
- # 💰 Smart Expense Tracker (Core Java + Swing)
+ #  Smart Expense Tracker (Core Java + Swing)
 
 A *GUI-based Smart Expense Tracker* built using *Core Java* to manage daily expenses efficiently.  
 This project demonstrates strong fundamentals of *OOPS, Collections, and Exception Handling* using a real-world use case.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The Smart Expense Tracker allows users to:
 - Add daily expenses
@@ -17,7 +17,7 @@ The application is *desktop-based* and developed using *Java Swing*, without any
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - *Language:* Java (Core Java)
 - *GUI:* Java Swing
@@ -28,7 +28,7 @@ The application is *desktop-based* and developed using *Java Swing*, without any
 
 ---
 
-## ✨ Features
+##  Features
 
 - Add expense with title, amount, and category
 - Automatic date capture
@@ -39,29 +39,29 @@ The application is *desktop-based* and developed using *Java Swing*, without any
 
 ---
 
-## 🧠 Core Java Concepts Demonstrated
+##  Core Java Concepts Demonstrated
 
-### 🔹 OOPS
+###  OOPS
 - Encapsulation
 - Object modeling using classes
 - Separation of concerns
 
-### 🔹 Collections
+###  Collections
 - List<Expense> for storing expense records dynamically
 - Efficient data handling without database dependency
 
-### 🔹 Exception Handling
+###  Exception Handling
 - Custom exception (InvalidExpenseException)
 - Input validation for empty fields and invalid amounts
 - Graceful error messages using dialog boxes
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 expense-tracker
 ├── Expense.java
 ├── InvalidExpenseException.java
-## 🖥️ Application Screens
+##  Application Screens
 
 - Input form for expense details
 - Expense list displayed using JTable
@@ -69,7 +69,7 @@ expense-tracker
 
 ---
 
-## ▶️ How to Run the Project
+##  How to Run the Project
 
 1. Clone or download the project
 2. Open it in IntelliJ IDEA or Eclipse
@@ -79,13 +79,13 @@ expense-tracker
 
 ---
 
-## 🎤 Interview Explanation (One-Liner)
+## Interview Explanation (One-Liner)
 
 > “This is a Core Java Swing-based Smart Expense Tracker that demonstrates OOPS principles, Collections for data management, and custom exception handling for validations.”
 
 ---
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 - Monthly expense summary
 - Category-wise expense analytics
@@ -96,14 +96,15 @@ expense-tracker
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 *Swetha Burra* 
 
 ---
 
-## 📜 License
+##  License
 
 This project is for *educational and learning purposes*.
 └── ExpenseTrackerApp.java﻿# ExpenseTrackerApp
+
 
