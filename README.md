@@ -15,6 +15,7 @@ The Smart Expense Tracker allows users to:
 
 The application is *desktop-based* and developed using *Java Swing*, without any database or external frameworks.
 
+
 ---
 
 ##  Technologies Used
@@ -34,8 +35,12 @@ The application is *desktop-based* and developed using *Java Swing*, without any
 - Automatic date capture
 - Input validation
 - Error handling using custom exceptions
+
+- 
 - User-friendly GUI
 - In-memory data management using collections
+- <img width="1050" height="642" alt="image" src="https://github.com/user-attachments/assets/c3126f1c-f751-4eb8-a10e-c0c21c6da60d" />
+
 
 ---
 
@@ -106,5 +111,6 @@ expense-tracker
 
 This project is for *educational and learning purposes*.
 └── ExpenseTrackerApp.java﻿# ExpenseTrackerApp
+
 
 
