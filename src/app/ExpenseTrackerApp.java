@@ -1,5 +1,6 @@
 package app;
 
+import exceptions.InvalidExpenseException;
 import model.Expense;
 
 import javax.swing.*;
@@ -52,19 +53,26 @@ public class ExpenseTrackerApp extends JFrame {
 
     }
     private void addExpense(){
+        try {
+            String title = titleField.getText().trim();
+            String amountText = amountField.getText().trim();
+            String category = (String) categoryBox.getSelectedItem();
+            ValidateExpense(title, amountText);
+            double amount = Double.parseDouble(amountText);
+            Expense expense = new Expense(title, amount, category);
+            expenses.add(expense);
+            tableModel.addRow(new Object[]{expense.getTitle(),
+                    expense.getAmount(),
+                    expense.getCategory(),
+                    expense.getDate()});
+            clearFields();
+        }
+        catch (InvalidExpenseException e ) {
+            JOptionPane.showMessageDialog(this,e.getMessage(),"Validation error",JOptionPane.ERROR_MESSAGE);
 
-        String title = titleField.getText().trim();
-        String  amountText =  amountField.getText().trim();
-        String category = (String) categoryBox.getSelectedItem();
-        ValidateExpense(title,amountText);
-        double amount = Double.parseDouble(amountText);
-        Expense expense = new Expense(title,amount, category);
-        expenses.add(expense);
-        tableModel.addRow(new Object[]{expense.getTitle(),
-        expense.getAmount(),
-        expense.getCategory(),
-        expense.getDate()});
-        clearFields();
+        } catch (NumberFormatException e ) {
+            JOptionPane.showMessageDialog(this,"Amount must be numeric ", "Error",JOptionPane.ERROR_MESSAGE);
+        }
 
     }
     private void clearFields(){
@@ -72,17 +80,16 @@ public class ExpenseTrackerApp extends JFrame {
         amountField.setText("");
 
     }
-    private void ValidateExpense(String title, String amount){
+    private void ValidateExpense(String title, String amount) throws InvalidExpenseException {
         if(title.isEmpty()){
-            System.out.println("Title cannot be empty");
-
+            throw new InvalidExpenseException("Title cannot be empty");
         }
         if(amount.isEmpty()){
-            System.out.println("Amount cannot be empty");
+            throw new InvalidExpenseException("Amount cannot be empty");
         }
         double value = Double.parseDouble(amount);
         if(value < 0){
-            System.out.println("Amount should be positive");
+            throw new InvalidExpenseException("Amount should be positive");
         }
 
     }
